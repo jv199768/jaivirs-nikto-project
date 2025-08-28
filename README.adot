@@ -1,0 +1,34 @@
+On Kali Linux, you can find memory leaks using system monitoring tools and dedicated debugging programs like Valgrind. To uninstall Nikto, use the standard apt package manager commands. 
+How to find memory leaks on Kali Linux
+1. Use system monitoring tools
+For a quick, real-time look at memory consumption, start with these standard Linux tools:
+top and htop: These commands show all running processes and their resource usage. In top, press M to sort by memory usage. htop offers a more user-friendly, color-coded interface and is a better choice for identifying which processes are consuming the most memory over time.
+smem: This tool provides a more detailed breakdown of memory usage, including shared and proportional memory. This can be useful for understanding how memory is distributed across processes.
+To install: sudo apt install smem
+To run: smem -r -k 
+2. Analyze a specific process using /proc
+If you suspect a specific process is leaking memory, you can examine its entry in the /proc filesystem. 
+Find the process ID (PID) of the application using ps aux | grep <process_name> or htop.
+Capture its initial memory map: cat /proc/<PID>/smaps > before.txt
+Allow the process to run for a while, letting memory consumption increase.
+Capture the memory map again: cat /proc/<PID>/smaps > after.txt
+Compare the two files using diff to find which memory ranges have grown. 
+3. Use Valgrind for detailed debugging
+For in-depth analysis of a running program, Valgrind is the standard tool for detecting memory leaks and memory management errors in C/C++ applications. 
+Install Valgrind: sudo apt update && sudo apt install valgrind
+Run your program with leak checking: valgrind --leak-check=full ./your_program
+Analyze the output: Valgrind will generate a detailed report showing any memory that was allocated but not freed, including the call stack where the leak originated. 
+How to uninstall Nikto
+Nikto is a standard package in Kali Linux, so it can be uninstalled using the apt package manager. 
+Remove Nikto: Use the following command to remove the Nikto package.
+bash
+sudo apt remove nikto
+Purge configuration files: To remove all associated configuration files as well, use the purge option.
+bash
+sudo apt purge nikto
+Remove unused dependencies: After uninstalling, remove any packages that were installed with Nikto but are no longer needed by other programs.
+bash
+sudo apt autoremove
+Clean the package cache: This command removes the downloaded Nikto installer files from your system.
+bash
+sudo apt clean
