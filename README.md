@@ -152,3 +152,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to
 Free Software Foundation, 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+ED23 – NetCat / SoCat / PowerCat / Bind Shell / Reverse Shell
+Check de nieuwste video:
+ED23 – NetCat / SoCat / PowerCat / Bind Shell / Reverse Shell
+
+NetCat, SoCat en PowerCat zijn netwerktools welke ons als pentesters maar ook netwerk engineers en onderzoekers ontzettend helpen met het testen en troubleshooten van netwerken. NetCat wordt ook wel het “Zwitserse Zakmes” genoemd van de netwerktools. Maar SoCat gaat feitelijk nog een stapje verder. En werk je met Windows dan is PowerCat een sterk Powershell-based NetCat alternatief. In deze video kijken we samen naar deze 3 katten en hun mogelijkheden. Daarnaast leer je in deze video wat: https://jarnobaselier.nl/ed23-netcat-socat-powercat-bind-shell-reverse-shell/
