@@ -1,0 +1,6 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<Error>
+<Code>NoSuchKey</Code>
+<Message>The specified key does not exist.</Message>
+<Details>No such object: minikube-builds/PR_NUMBER/minikube-windows-amd64.exe</Details>
+</Error>
